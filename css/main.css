@@ -1,0 +1,188 @@
+/* === fontawesome === */
+@import url('font-awesome.css');
+
+/* old color #890000 */
+
+h1, h2, h3, h4, h5, h6 {
+	color: #5A9F17;
+}
+
+.jumbotron {
+/*  background-color: #FF3B30;*/
+/*  background-color: #C92611;*/
+  background-color: #5A9F17;
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+	margin: auto;
+}
+
+section {
+  display: block;
+}
+.navbar-custom {
+    /* background-color:#C7C7CC; */
+    background-color:#D6ECCC;
+    color:red;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#5A9F17;
+    font-weight:bold;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color: #5A9F17;
+}
+
+/* .fa { */
+/*   color: #FFF; */
+/* } */
+
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #5A9F17;
+}
+footer > div p {
+/*  font-weight: bold;*/
+  padding-top: 10px;
+  color: #FFF;
+}
+
+
+
+/* footer social icons */
+
+.social-network a {
+	background-color:#fff;
+}
+
+.social-network a.icoGithub:hover i {
+	color: #fff;
+}
+.social-network a.icoGithub:hover {
+	background-color:#000;
+}
+
+
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+
+.social-network a.icoTwitter:hover i {
+	color: #fff;
+}
+
+.social-network a.icoYoutube:hover {
+	background-color:#E0312E;
+}
+
+.social-network a.icoYoutube:hover i {
+	color: #FFF;
+}
+
+.social-network a.icoSoundcloud:hover {
+	background-color:#FF4C00;
+}
+
+.social-network a.icoSoundcloud:hover i {
+	color: #FFF;
+}
+
+
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #5A9F17;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+}
+.footer {
+  color: #efefef;
+  background-color: #333;
+}
+.footer a {
+  color: #5A9F17;
+}
+
+.footer h4 {
+  color: #fff;
+}
+

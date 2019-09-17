@@ -1,3 +1,189 @@
-<html>
-Hello World
+<!doctype html>
+<html ng-app="game">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <title>Divide By 5 | HTML5 Games</title>
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+
+<!-- Begin Jumbotron -->
+<div class="jumbotron">
+
+    <!-- Content -->
+    <div class="container center-vertically">
+      <div class="pull-right">
+        <ul class="social-network social-circle">
+          <li><a href="https://github.com/rantt" class="icoGithub" title="Github"><i class="fa fa-github fa-2x"></i></a></li>
+          <li><a href="https://twitter.com/rantt_" class="icoTwitter" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCBEfjDXRkuX873fflAgOzrQ" class="icoYoutube" title="Youtube"><i class="fa fa-youtube fa-2x"></i></a></li>
+          <li><a href="https://soundcloud.com/rantt" class="icoSoundcloud" title="Soundcloud"><i class="fa fa-soundcloud fa-2x"></i></a></li>
+        </ul>
+      </div>
+
+        <h1>Divide By<img src="img/logo.png" width="120", height="120"></img></h1>
+        <p>Hi, I just started making HTML5 games.  This is where I put them :)</p>
+
+    </div>
+
+</div>
+<!-- End Jumbotron -->
+
+<!-- Begin Navigation -->
+<div class="navbar navbar-custom">
+
+    <div class="container">
+
+        <!-- Mobile Navigation -->
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class="ion-navicon"></span>
+        </button>
+
+        <!-- Main Navigation -->
+        <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                <li><a href="http://blog.divideby5.com"><i class="fa fa-book fa-lg"></i> Blog</a></li>
+                <li><a href="#"><i class="fa fa-user fa-lg"></i> Contact</a></li>
+                <li><a href="lab/"><i class="fa fa-flask fa-lg"></i> Lab</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+<!-- End Navigation -->
+
+    <div class="container">
+      <div class="row">
+        <h1 class="page-header">One Game A Month 2017 (#1GAM)</h1>
+        <p>
+
+        <div ng-controller="GameLibraryController as library">
+          <div ng-repeat="game in library.onegameamonth" class="col-lg-4 col-sm-6 game-item"  >
+            <!-- <div class='clearfix'></div> -->
+            <h3><a href="games/{{game.url}}/">Week #{{game.number}}: {{game.name}}</a></h3>
+            <div class="thumbnail">
+              <a href="games/{{game.url}}/"><img ng-src="games/{{game.url}}/screenshots/{{game.url}}.gif" height="349" width="328"></a>
+              <div class="caption">
+                <p>{{game.description}}</p>
+                <p ng-show="game.ludumdareSite"><a href="{{game.ludumdareSite}}">Ludum Dare Compo Site</a></p>
+                <p><em>Posted:  {{game.postedOn}}</em></p>
+                <p><a href="games/{{game.url}}/" class="btn btn-info" role="button"><i class="fa fa-gamepad fa-lg"></i> Play!</a>
+                <a href="{{game.github}}/" class="btn btn-warning" role="button" ng-show="game.github"><i class="fa fa-github-alt fa-lg"></i> Source</a></p>
+              </div>
+            </div>
+          </div>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1 class="page-header">One Game A Week</h1>
+        <p>
+
+        <div ng-controller="GameLibraryController as library">
+          <div ng-repeat="game in library.onegameaweekgames" class="col-lg-4 col-sm-6 game-item"  >
+            <!-- <div class='clearfix'></div> -->
+            <h3><a href="games/{{game.url}}/">Week #{{game.number}}: {{game.name}}</a></h3>
+            <div class="thumbnail">
+              <a href="games/{{game.url}}/"><img ng-src="games/{{game.url}}/screenshots/{{game.url}}.gif" height="349" width="328"></a>
+              <div class="caption">
+                <p>{{game.description}}</p>
+                <p ng-show="game.ludumdareSite"><a href="{{game.ludumdareSite}}">Ludum Dare Compo Site</a></p>
+                <p><em>Posted:  {{game.postedOn}}</em></p>
+                <p><a href="games/{{game.url}}/" class="btn btn-info" role="button"><i class="fa fa-gamepad fa-lg"></i> Play!</a>
+                <a href="{{game.github}}/" class="btn btn-warning" role="button" ng-show="game.github"><i class="fa fa-github-alt fa-lg"></i> Source</a></p>
+              </div>
+            </div>
+          </div>
+
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">My Other Games
+                    <!-- <small>Made w/ Phaser :)</small> -->
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+      <div ng-controller="GameLibraryController as library">
+        <div ng-repeat="game in library.games" class="col-lg-4 col-sm-6 game-item"  >
+          <!-- <div class='clearfix'></div> -->
+          <h3><a href="games/{{game.url}}/">Game #{{game.number}}: {{game.name}}</a></h3>
+          <div class="thumbnail">
+            <a href="games/{{game.url}}/"><img ng-src="games/{{game.url}}/screenshots/screenshot.png" height="349" width="328"></a>
+            <div class="caption">
+              <p>{{game.description}}</p>
+              <p ng-show="game.ludumdareSite"><a href="{{game.ludumdareSite}}">Ludum Dare Compo Site</a></p>
+              <p><em>Posted:  {{game.postedOn}}</em></p>
+              <p><a href="games/{{game.url}}/" class="btn btn-info" role="button">Play!</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<div class='footer'>
+  <div class='container'>
+    <div class='row'>
+      <!-- <div class='col&#45;sm&#45;4 col&#45;md&#45;3 col&#45;xs&#45;6'> -->
+      <!--   <h4>Who am I</h4> -->
+      <!--   <p>Web Developer by day, HTML5 Game Dev Hobbyist by night.</p> -->
+      <!-- </div> -->
+
+      <div class='col-sm-2 col-xs-6 col-md-offset-1'>
+        <h4>Other Stuff</h4>
+        <ul class='list-unstyled'>
+          <li><a href='https://github.com/rantt'><i class='fa fa-github-alt'></i> My Github Profile</a></li>
+          <li><a href='http://www.onegameamonth.com/rantt_'>My #1GAM Profile</a></li>
+          <li><a href='https://www.youtube.com/channel/UCBEfjDXRkuX873fflAgOzrQ'><i class='fa fa-youtube'></i> My Youtube Channel</a></li>
+          <li><a href='http://www.twitch.tv/ranttly'><i class='fa fa-twitch'></i> My Twitch.tv Channel</a></li>
+        </ul>
+      </div>
+
+      <div class='clearfix visible-xs'></div>
+
+      <div class='col-sm-2 col-xs-6'>
+        <h4>Stay in Touch</h4>
+        <ul class='list-unstyled'>
+          <!-- <li><a href='#'>About</a></li> -->
+          <!-- <li><a href='#'>Contact</a></li> -->
+          <li><a href='http://blog.divideby5.com'>Blog</a></li>
+          <li><a href='http://twitter.com/rantt_'>Twitter</a></li>
+
+        </ul>
+      </div>
+
+      <div class='col-sm-4 col-md-3 col-md-offset-1 col-xs-6'>
+        <h4>Wanna Say Hi?</h4>
+        <ul class='list-unstyled'>
+          <!-- <li><i class='fa fa&#45;globe'></i> Fredericton, NB<li> -->
+          <li><i class='fa fa-twitter'></i> @rantt_<li>
+          <li><i class='fa fa-envelope'></i> <a href='mailto:#'>david.canam@gmail.com</a><li>
+        </ul>
+
+        <p>DivideBy5.com &copy;2014.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+  </body>
 </html>
