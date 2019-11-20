@@ -58,30 +58,30 @@
 </div>
 <!-- End Navigation -->
 
-    <div class="container">
-      <div class="row">
-        <h1 class="page-header">One Game A Month 2017 (#1GAM)</h1>
-        <p>
-
-        <div ng-controller="GameLibraryController as library">
-          <div ng-repeat="game in library.onegameamonth" class="col-lg-4 col-sm-6 game-item"  >
-            <!-- <div class='clearfix'></div> -->
-            <h3><a href="games/{{game.url}}/">Week #{{game.number}}: {{game.name}}</a></h3>
-            <div class="thumbnail">
-              <a href="games/{{game.url}}/"><img ng-src="games/{{game.url}}/screenshots/{{game.url}}.gif" height="349" width="328"></a>
-              <div class="caption">
-                <p>{{game.description}}</p>
-                <p ng-show="game.ludumdareSite"><a href="{{game.ludumdareSite}}">Ludum Dare Compo Site</a></p>
-                <p><em>Posted:  {{game.postedOn}}</em></p>
-                <p><a href="games/{{game.url}}/" class="btn btn-info" role="button"><i class="fa fa-gamepad fa-lg"></i> Play!</a>
-                <a href="{{game.github}}/" class="btn btn-warning" role="button" ng-show="game.github"><i class="fa fa-github-alt fa-lg"></i> Source</a></p>
-              </div>
-            </div>
-          </div>
-
-        </p>
-      </div>
-    </div>
+    <!-- <div class="container"> -->
+    <!--   <div class="row"> -->
+    <!--     <h1 class="page&#45;header">One Game A Month 2017 (#1GAM)</h1> -->
+    <!--     <p> -->
+    <!--  -->
+    <!--     <div ng&#45;controller="GameLibraryController as library"> -->
+    <!--       <div ng&#45;repeat="game in library.onegameamonth" class="col&#45;lg&#45;4 col&#45;sm&#45;6 game&#45;item"  > -->
+    <!--         <!&#45;&#45; <div class='clearfix'></div> &#45;&#45;> -->
+    <!--         <h3><a href="games/{{game.url}}/">Week #{{game.number}}: {{game.name}}</a></h3> -->
+    <!--         <div class="thumbnail"> -->
+    <!--           <a href="games/{{game.url}}/"><img ng&#45;src="games/{{game.url}}/screenshots/{{game.url}}.gif" height="349" width="328"></a> -->
+    <!--           <div class="caption"> -->
+    <!--             <p>{{game.description}}</p> -->
+    <!--             <p ng&#45;show="game.ludumdareSite"><a href="{{game.ludumdareSite}}">Ludum Dare Compo Site</a></p> -->
+    <!--             <p><em>Posted:  {{game.postedOn}}</em></p> -->
+    <!--             <p><a href="games/{{game.url}}/" class="btn btn&#45;info" role="button"><i class="fa fa&#45;gamepad fa&#45;lg"></i> Play!</a> -->
+    <!--             <a href="{{game.github}}/" class="btn btn&#45;warning" role="button" ng&#45;show="game.github"><i class="fa fa&#45;github&#45;alt fa&#45;lg"></i> Source</a></p> -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </div> -->
+    <!--  -->
+    <!--     </p> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
     <div class="container">
       <div class="row">
